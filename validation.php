@@ -17,7 +17,7 @@ require('model/functions.fn.php');
 		header('Location: register.php');
 	}
 
-}else{ 
+else{ 
 	$_SESSION['message'] = 'Erreur : Formulaire incomplet';
 	header('Location: register.php');
 }

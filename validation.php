@@ -5,7 +5,7 @@ require('model/functions.fn.php');
 	$isEmailAvailable = isEmailAvailable($db, $_POST['email']);
 	$isUsernameAvailable = isUsernameAvailable($db, $_POST['username']);
 	if($isEmailAvailable == true && $isUsernameAvailable == true){
-		$userRegistration = userRegistration($db, $_POST['username'], $_POST['email'], $_POST['password']);
+		userRegistration($db, $_POST['username'], $_POST['email'], $_POST['password']);
 		header('Location: login.php');
 	}
 	elseif($isEmailAvailable == false && $isUsernameAvailable == true){
@@ -17,7 +17,7 @@ require('model/functions.fn.php');
 		header('Location: register.php');
 	}
 
-}else{ 
+else{ 
 	$_SESSION['message'] = 'Erreur : Formulaire incomplet';
 	header('Location: register.php');
 }

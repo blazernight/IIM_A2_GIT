@@ -16,6 +16,11 @@ input:focus {
 	color: #fff;
 }
 
+#logbox:hover {
+	color: #F50;
+	border: solid 1px #F50;
+
+}
 #logbox.register {
 	background-color: #333;
 }
@@ -33,21 +38,24 @@ input:focus {
 #logbox .form-input,
 #logbox .form-submit {
 	padding: 10px 0;
+	color: white;
 }
-
+#logbox .form-input:hover{
+	color: #F50;
+}
 #logbox .form-input input[type="text"],
 #logbox .form-input input[type="password"] {
 	width: 100%;
 	border: transparent;
 	padding: 10px 0 10px 40px;
 	background-color: rgba(255,255,255,.2);
-	color: white;
+	color: #F50;
 	font-size: 12px;
 	text-transform: uppercase;
 }
 
 #logbox .form-input input:focus {
-	background-color: rgba(255,255,255,.5);
+	background-color: black;
 	transition:all 0.3s linear;
 }
 

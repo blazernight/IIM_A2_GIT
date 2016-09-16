@@ -18,7 +18,7 @@ if( isset($_FILES['music']) && !empty($_FILES['music']) &&
 			// TODO
 			$user_id=$_SESSION['id'];
 
-			$addmusic=  addMusic($db, $user_id, $_POST['title'], $file['name']);
+			$addmusic=  addMusic($db, $user_id, $_POST['title'], $destination);
 			
 			move_uploaded_file ($file['tmp_name'] , $destination );
 			header('dashboard.php');
